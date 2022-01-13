@@ -114,6 +114,7 @@ RUN set -ex; \
   rm -r "$GNUPGHOME"
 
 COPY --chown=0:0 scripts /opt/docker-solr/scripts
+COPY ./configsets/corel8cfg /opt/solr/server/solr/configset/corel8cfg
 
 VOLUME /var/solr
 EXPOSE 8983
